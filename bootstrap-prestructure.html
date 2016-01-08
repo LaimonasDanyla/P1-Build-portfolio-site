@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>design-mockup-bootstrap</title>
+		<link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css'>
+		<!--LINKS AND SCRIPTS FOR bootstrap-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- COMPONENTS FOR POLYMER ELEMENTS-->
+		<link rel="import" href="elements/first_element.html">
+		<link rel="import" href="elements/picture_element.html">
+		<link rel="import" href="elements/data_binding.html">
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	</head>
+	<body>
+			<main>
+			<div class="container">
+				<section>
+				<header>
+				<div class="row">
+						<div class="col-md-6">
+								<img class="logopic" src="images/UdacityLogo.png" alt="Udacity logo">
+						</div>
+						<div class="col-md-6 text-right text-uppercase">
+								<h1 class="text-thin">Laimonas Danyla</h1>
+								<h3>Front-end student</h3>
+						</div>
+				</div>
+				</header>
+				<hr>
+				<!-- NAVIGATION-->
+				<div class="row">
+						<nav id="drawer" class="nav">
+							<ul class="nav__list col-md-12">
+								<li class="nav__item col-md-3"><a href="#">Abstract</a></li>
+								<li class="nav__item col-md-3"><a href="#">Nature</a></li>
+								<li class="nav__item col-md-3"><a href="#">Food</a></li>
+								<li class="nav__item col-md-3"><a href="#">Sport</a></li>
+							</ul>
+						</nav>
+				</div>
+				<a id="menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+					</svg>
+				</a>
+				<!--MAIN IMAGE, RESPONSIVE WITH BOOTSTRAP
+				AND CHANGING FILES DEPENDING ON VIEWPORT SIZE-->
+			<div class="row">
+				<div class="col-md-12">
+					<figure>
+						<picture class="img-responsive">
+							<source
+								media="(max-width: 768px)"
+								srcset="images/technics-q-c-400-123-1x.jpg">
+							<source
+								media="(min-width: 769px)"
+								srcset= "images/technics-q-c-1140-350-2x.jpg">
+							<img class="img-responsive"
+								src="images/technics-q-c-1140-350-2x.jpg"
+								alt="Headset and keyboard">
+						</picture>
+						<figcaption></figcaption>
+					</figure>
+				</div>
+			</div>
+			</section>
+			<!-- CLICKABLE IMAGES, RESPONSIVE WITH BOOTSTRAP
+			AND CHANGING FILES DEPENDING ON VIEWPORT SIZE-->
+			<section>
+					<div class="col-md-12">
+						<h2 class="text-muted">Featured Work</h2>
+					</div>
+			<div class="row center-block text-center">
+				<div class="col-md-6">
+					<figure>
+							<picture class="img-responsive">
+								<source
+									media="(max-width: 400px)"
+									srcset="images/abstract200w.jpg">
+								<source
+									media="(min-width: 401px) and (max-width: 768px)"
+									srcset="images/abstract-q-c-400-216px.jpg">
+								<img class="img-responsive"
+									src="images/abstract-q-c-555-300px.jpg"
+									alt="Abstract painting"
+									data-toggle="modal"
+									data-target="#abstract">
+							</picture>
+						<figcaption>
+							<h3 class="text-uppercase">Abstract</h3>
+								<p><a href="http://lorempixel.com">Link to image source</a></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6">
+						<figure>
+								<picture class="img-responsive">
+									<source
+										media="(max-width: 400px)"
+										srcset="images/nature-q-c-200px.jpg">
+									<source
+										media="(min-width: 401px) and (max-width: 768px)"
+										srcset="images/nature-q-c-400-216-1x.jpg">
+									<img class="img-responsive"
+										src="images/nature-q-c-555-300-10.jpg"
+										alt="Nature: Water drop photo"
+										data-toggle="modal"
+										data-target="#nature">
+								</picture>
+						<figcaption>
+								<h3 class="text-uppercase">Nature</h3>
+									<p><a href="http://lorempixel.com">Link to image source</a></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6">
+					<figure>
+							<picture class="img-responsive">
+								<source
+									media="(max-width: 400px)"
+									srcset="images/food-q-c-200px.jpg">
+								<source
+									media="(min-width: 401px) and (max-width: 768px)"
+									srcset="images/food-q-c-400-216-1x.jpg">
+								<img class="img-responsive"
+									src="images/food-q-c-555-300-2x.jpg"
+									alt="Tasty view"
+									data-toggle="modal"
+									data-target="#tasty">
+							</picture>
+						<figcaption>
+							<h3 class="text-uppercase">Tasty</h3>
+								<p><a href="http://lorempixel.com">Link to image source</a></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6">
+					<figure>
+							<picture class="img-responsive">
+								<source
+										media="(max-width: 400px)"
+										srcset="images/sports-q-c-200px.jpg">
+								<source
+										media="(min-width: 401px) and (max-width: 768px)"
+										srcset="images/sports-q-c-400-216-1x.jpg">
+								<img class="img-responsive"
+										src="images/sports-q-c-555-300-2x.jpg"
+										alt="Surfer getting on wave"
+										data-toggle="modal"
+										data-target="#surfing">
+							</picture>
+						<figcaption>
+							<h3 class="text-uppercase">Surfing</h3>
+								<p><a href="http://lorempixel.com">Link to image source</a></p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
+<hr>
+<article class="polymer-article">
+	<header class="text-center">
+		<h1>Inlcusion of Polymers</h1>
+			<p>For Chrome browser only</p>
+	</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+				<h2><first-element></first-element></h2>
+						<div class="col-md-6 polymer-picture">
+									<p><picture-frame></picture-frame></p>
+						</div>
+						<div class="col-md-6 polymer-data">
+							<p><data-binding></data-binding></p>
+						</div>
+				</div>
+			</div>
+		</div>
+</article>
+
+	<!-- trying with modals-->
+	<!--modal for abstract-->
+	<div class="modal fade" id="abstract" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+						</div>
+							<div class="modal-body">
+								<figure>
+										<picture class="img-responsive">
+											<source
+												media="(max-width: 400px)"
+												srcset="images/abstract200w.jpg">
+											<source
+												media="(min-width: 401px) and (max-width: 768px)"
+												srcset="images/abstract-q-c-400-216px.jpg">
+											<img class="img-responsive"
+												src="images/abstract-q-c-555-300px.jpg"
+												alt="Abstract painting">
+										</picture>
+									<figcaption class="text-center">
+										<h3 class="text-uppercase">Abstract</h3>
+											<p><a href="http://lorempixel.com">Link to image source</a></p>
+									</figcaption>
+								</figure>
+									<p class="text-justify">
+										This project was very valuable. I learned a lot about HTML,
+										CSS and responsive design. When viewport is less than 400px,
+										code takes smaller image of 200px width, then medium size of 400px,
+										and 555px images for over 556px viewport. For a immediate check
+										if files are changed accordingly - you will see the pixel
+										information in the image itself (food and sport images
+										are without pixel information and main image has only 2 versions).
+										Same responsive system aplied for JavaScrip images appearing
+										after you press the main one.
+								</p>
+							</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	<!--modal for nature-->
+	<div class="modal fade" id="nature" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel2">Favorite App Page</h4>
+				</div>
+				<div class="modal-body">
+					<figure>
+						<picture class="img-responsive">
+							<source
+								media="(max-width: 400px)"
+								srcset="images/nature-q-c-200px.jpg">
+							<source
+								media="(min-width: 401px) and (max-width: 768px)"
+								srcset="images/nature-q-c-400-216-1x.jpg">
+							<img class="img-responsive"
+								src="images/nature-q-c-555-300-10.jpg"
+								alt="Nature: Water drop photo">
+						</picture>
+					<figcaption class="text-center">
+						<h3 class="text-uppercase">Nature</h3>
+							<p><a href="http://lorempixel.com">Link to image source</a></p>
+					</figcaption>
+				</figure>
+					<p class="text-justify">Hands on practice</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modal for tasty-->
+	<div class="modal fade" id="tasty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel3">Favorite App Page</h4>
+				</div>
+				<div class="modal-body">
+					<figure>
+							<picture class="img-responsive">
+								<source
+									media="(max-width: 400px)"
+									srcset="images/food-q-c-200px.jpg">
+								<source
+									media="(min-width: 401px) and (max-width: 768px)"
+									srcset="images/food-q-c-400-216-1x.jpg">
+								<img class="img-responsive"
+									src="images/food-q-c-555-300-2x.jpg"
+									alt="Tasty view">
+							</picture>
+						<figcaption class="text-center">
+							<h3 class="text-uppercase">Tasty</h3>
+								<p><a href="http://lorempixel.com">Link to image source</a></p>
+						</figcaption>
+					</figure>
+						<p class="text-justify">
+							This was my first project in this class.
+							I learned a lot about HTML and CSS.
+						</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--modal for sport-->
+	<div class="modal fade" id="surfing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel4">Favorite App Page</h4>
+				</div>
+					<div class="modal-body">
+						<figure>
+								<picture class="img-responsive">
+									<source
+										media="(max-width: 400px)"
+										srcset="images/sports-q-c-200px.jpg">
+									<source
+										media="(min-width: 401px) and (max-width: 768px)"
+										srcset="images/sports-q-c-400-216-1x.jpg">
+									<img class="img-responsive"
+										src="images/sports-q-c-555-300-2x.jpg"
+										alt="Surfer getting on wave">
+								</picture>
+							<figcaption class="text-center">
+								<h3 class="text-uppercase">Surfing</h3>
+									<p><a href="http://lorempixel.com">Link to image source</a></p>
+							</figcaption>
+						</figure>
+							<p class="text-justify">
+								This was my first project in this class.
+								I learned a lot about HTML and CSS.
+							</p>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		/*
+		 * Open the drawer when the menu ison is clicked.
+		 */
+		var menu = document.querySelector('#menu');
+		var main = document.querySelector('main');
+		var drawer = document.querySelector('#drawer');
+
+		menu.addEventListener('click', function(e) {
+			drawer.classList.toggle('open');
+			e.stopPropagation();
+		});
+			main.addEventListener('click', function() {
+			drawer.classList.remove('open');
+		});
+	</script>
+	</body>
+</html>

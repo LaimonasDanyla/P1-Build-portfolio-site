@@ -1,0 +1,15 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="data-binding">
+  <template>
+      <h1>Custom Attributes in Polymer!</h1>
+	     <p class="poly-data">I am learning <span>{{course}}</span></p>
+  </template>
+  <script>
+  Polymer({
+    is: "data-binding",
+    ready: function() {
+      this.course = "front end web development";
+    }
+  });
+  </script>
+</dom-module>
